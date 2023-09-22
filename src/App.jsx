@@ -44,9 +44,13 @@ function App() {
         />
       ))}
       <div>
-        <button onClick={uvecajGodine}>Uvecaj godine</button>
-      </div>
       <UserForm addUser={addUser} />
+      </div>
+      <br />
+      <div>
+      <button onClick={uvecajGodine}>Uvecaj godine</button>
+      </div>
+
     </>
   );
 }

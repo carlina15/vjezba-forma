@@ -25,7 +25,7 @@ const UserForm = ({ addUser }) => {
           onChange={handleInputChange}
         />
       </label>
-      <label>
+      <label> <br /> <br />
         Godine:
         <input
           type="text"
@@ -33,7 +33,8 @@ const UserForm = ({ addUser }) => {
           value={newUser.years}
           onChange={handleInputChange}
         />
-      </label>
+        <br />
+      </label> <br />
       <button type="submit">Dodaj korisnika</button>
     </form>
   );
