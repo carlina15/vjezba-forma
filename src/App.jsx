@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './App.css';
-import { UserFunction } from './user';
-import UserForm from './user/UserForm';
+import React, { useState } from "react";
+import "./App.css";
+import { UserFunction } from "./user";
+import UserForm from "./user/UserForm";
 
 function App() {
   const initialUsers = [
-    { id: 1, name: 'Ivan', years: 30 },
-    { id: 2, name: 'Marko', years: 35 },
-    { id: 3, name: 'Ana', years: 25 },
+    { id: 1, name: "Ivan", years: 30 },
+    { id: 2, name: "Marko", years: 35 },
+    { id: 3, name: "Ana", years: 25 },
   ];
 
   const [users, setUsers] = useState(initialUsers);
@@ -29,7 +29,10 @@ function App() {
   };
 
   const addUser = (newUser) => {
-    setUsers((prevState) => [...prevState, { ...newUser, id: prevState.length + 1 }]);
+    setUsers((prevState) => [
+      ...prevState,
+      { ...newUser, id: prevState.length + 1 },
+    ]);
   };
 
   return (
@@ -44,13 +47,21 @@ function App() {
         />
       ))}
       <div>
-      <UserForm addUser={addUser} />
+        <UserForm addUser={addUser} />
       </div>
       <br />
       <div>
-      <button onClick={uvecajGodine}>Uvecaj godine</button>
+        <button
+          onClick={uvecajGodine}
+          style={{
+            backgroundColor: "violet",
+            color: "white",
+            border: "none",
+          }}
+        >
+          Uvecaj godine
+        </button>
       </div>
-
     </>
   );
 }
